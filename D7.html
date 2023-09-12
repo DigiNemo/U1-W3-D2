@@ -165,8 +165,10 @@
 
       const paintItGreen = function () {
         const everyUl = document.getElementsByTagName("ul");
-        everyUl.style.backGroundColor = "green";
+        let realArray = Array.from(everyUl);
+        realArray.forEach((ul) => (ul.style.backgroundColor = "green"));
       };
+      paintItGreen();
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
